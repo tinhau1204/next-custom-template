@@ -15,6 +15,7 @@ All have been configured so that you nearly don't need to touch any of its confi
 -   React-icons
 -   Tailwindcss
 -   Redux/redux-toolkit
+-   Husky
 -   Eslint
 -   Prettier
 -   Stylelint
