@@ -17,7 +17,7 @@ All have been configured so that you nearly don't need to touch any of its confi
 -   Redux/redux-toolkit
 -   Eslint
 -   Prettier
--   Stylelnt
+-   Stylelint
 
 ## Setup
 
