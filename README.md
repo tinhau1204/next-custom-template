@@ -2,20 +2,22 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Default with:
+## What?
 
-This project comes with `Typescript` by default ~~Yes, who want Javascript?~~
+This project comes with `Typescript` by default. (~~Yes, who want Javascript?~~)
 
-#### tools
+### Tools
 
--   axios
--   react-hook-form
--   react-icons
--   tailwindcss
--   redux/redux-toolkit
--   eslint
--   prettier
--   stylelnt
+All have been configured so that you nearly don't need to touch any of its config.
+
+-   Axios
+-   React-hook-form
+-   React-icons
+-   Tailwindcss
+-   Redux/redux-toolkit
+-   Eslint
+-   Prettier
+-   Stylelnt
 
 ## Setup
 
