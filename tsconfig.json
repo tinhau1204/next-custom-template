@@ -2,6 +2,7 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
+            "@/*": ["*"],
             "@redux": ["redux"],
             "@redux/*": ["redux/*"],
             "@components/*": ["components/*"],
