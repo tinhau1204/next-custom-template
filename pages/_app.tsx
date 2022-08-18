@@ -1,9 +1,7 @@
-import '../styles/globals.css';
-import '../styles/normalize.min.css';
-import '../public/fontawesome-free-5.15.4-web/css/all.min.css';
-import type { AppProps } from 'next/app';
-import { Provider } from 'react-redux';
-import store from '../redux';
+import "@styles/globals.scss";
+import type { AppProps } from "next/app";
+import { Provider } from "react-redux";
+import store from "@redux/store";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (

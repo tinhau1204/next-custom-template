@@ -1,15 +1,40 @@
+# Next Custom Template
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Setup
-With npx:
+## Default with:
 
-```
+This project comes with `Typescript` by default ~~Yes, who want Javascript?~~
+
+#### tools
+
+-   axios
+-   react-hook-form
+-   react-icons
+-   tailwindcss
+-   redux/redux-toolkit
+-   eslint
+-   prettier
+-   stylelnt
+
+## Setup
+
+-   npx:
+
+```bash
 npx create-next-app -e https://github.com/cpea2506/next-custom-template
 ```
 
-With yarn: 
+-   yarn:
+
+```bash
+yarn dlx create next-app -e https://github.com/cpea2506/next-custom-template
 ```
-yarn create next-app -e https://github.com/cpea2506/next-custom-template
+
+-   pnpm:
+
+```bash
+pnpm dlx create next-app -e https://github.com/cpea2506/next-custom-template
 ```
 
 ## Getting Started
@@ -20,6 +45,8 @@ First, run the development server:
 npm run dev
 # or
 yarn dev
+#or
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.

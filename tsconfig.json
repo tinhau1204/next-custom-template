@@ -1,5 +1,14 @@
 {
     "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@redux": ["redux"],
+            "@redux/*": ["redux/*"],
+            "@components/*": ["components/*"],
+            "@shards/*": ["components/shards/*"],
+            "@styles/*": ["styles/*"],
+            "@lib/*": ["lib/*"]
+        },
         "target": "ESNext",
         "lib": ["dom", "dom.iterable", "esnext"],
         "allowJs": true,

@@ -1,21 +1,16 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
-import { useDispatch, useSelector } from 'react-redux';
-import Test from '../components/shard/Test';
-import { selectCount, setCount } from '../redux/count/action';
-import styles from '../styles/Home.module.css';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useAppDispatch, useAppSelector } from "@lib/hooks";
+import { increment, decrement, reset, getCount } from "@redux/counter";
+import CounterDisplay from "@shards/CounterDisplay";
+import Button from "@components/shards/Button";
 
 const Home: NextPage = () => {
-    const count = useSelector(selectCount);
-    const dispatch = useDispatch();
-
-    const handleClick = () => {
-        dispatch(setCount(count + 1));
-    };
+    const count = useAppSelector(getCount);
+    const dispatch = useAppDispatch();
 
     return (
-        <div className={styles.container}>
+        <div className="flex flex-col justify-evenly items-center h-screen min-h-screen px-0 py-2">
             <Head>
                 <title>Create Next App</title>
                 <meta
@@ -25,78 +20,19 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <button onClick={handleClick}>Increase</button>
-            <Test />
+            <CounterDisplay value={count} />
 
-            <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Welcome to{' '}
-                    <a href="https://nextjs.org">Next.js! {count} </a>
-                </h1>
-
-                <p className={styles.description}>
-                    Get started by editing{' '}
-                    <code className={styles.code}>pages/index.js</code>
-                </p>
-
-                <div className={styles.grid}>
-                    <a href="https://nextjs.org/docs" className={styles.card}>
-                        <h2>Documentation &rarr;</h2>
-                        <p>
-                            Find in-depth information about Next.js features and
-                            API.
-                        </p>
-                    </a>
-
-                    <a href="https://nextjs.org/learn" className={styles.card}>
-                        <h2>Learn &rarr;</h2>
-                        <p>
-                            Learn about Next.js in an interactive course with
-                            quizzes!
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://github.com/vercel/next.js/tree/master/examples"
-                        className={styles.card}
-                    >
-                        <h2>Examples &rarr;</h2>
-                        <p>
-                            Discover and deploy boilerplate example Next.js
-                            projects.
-                        </p>
-                    </a>
-
-                    <a
-                        href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                        className={styles.card}
-                    >
-                        <h2>Deploy &rarr;</h2>
-                        <p>
-                            Instantly deploy your Next.js site to a public URL
-                            with Vercel.
-                        </p>
-                    </a>
-                </div>
-            </main>
-
-            <footer className={styles.footer}>
-                <a
-                    href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Powered by{' '}
-                    <span className={styles.logo}>
-                        <Image
-                            src="/vercel.svg"
-                            alt="Vercel Logo"
-                            width={72}
-                            height={16}
-                        />
-                    </span>
-                </a>
-            </footer>
+            <div className="flex justify-evenly w-full">
+                <Button
+                    label="Increment"
+                    onClick={() => dispatch(increment())}
+                />
+                <Button label="Reset" onClick={() => dispatch(reset())} />
+                <Button
+                    label="Decrement"
+                    onClick={() => dispatch(decrement())}
+                />
+            </div>
         </div>
     );
 };
